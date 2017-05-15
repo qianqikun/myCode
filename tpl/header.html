@@ -1,0 +1,52 @@
+<div id="my_nav">
+  <div class="container">
+    <a class="logo lf" href="#/Main">漫画</a>
+    <ul class="nav-list">
+      <li><a href="#/Main">热血</a></li>
+      <li><a href="#/Main">青春</a></li>
+      <li><a href="#/Main">科幻</a></li>
+      <li><a href="#/Main">搞笑</a></li>
+    </ul>
+    <div class="nav_dropdown" ng-click="navFunc()">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="点我" id="search_input" ng-model="search_data.search_kw"
+             ng-focus="searchfoucs()" ng-blur="searchBlur()"/>
+      <span class="fa-search" ng-click="jump('/Main')"></span>
+    </div>
+  </div>
+</div>
+<div class="md-modal md-effect-10" id="modal-10">
+  <div class="md-content">
+    <div class="register">
+      <div ng-hide="isRegisterSuc">
+        <h2>新用户注册</h2>
+        <ul>
+          <li>
+            <input type="text" name="new_uname" id="new_uname" placeholder="请输入用户名"/>
+            <em></em>
+          </li>
+          <li>
+            <input type="password" name="new_upwd" id="new_upwd" placeholder="请输出6-12位密码"/>
+            <span>请输入密码</span>
+            <span>密码格式不正确</span>
+          </li>
+          <li>
+            <input type="password" placeholder="请确认密码"/>
+            <span>密码输入不一致</span>
+          </li>
+        </ul>
+        <p><input type="checkbox" checked/> 我已阅读并同意</p>
+        <button type="button" ng-click="register()">提交注册</button>
+      </div>
+      <p ng-show="isRegisterSuc" class="regSuc" ng-model="time_login">
+        恭喜您注册成功，您的用户编号为{{uid}}<br/>
+        {{time_login}}秒后自动登陆
+      </p>
+    </div>
+  </div>
+</div>
+<div class="md-overlay"></div>

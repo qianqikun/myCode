@@ -1,0 +1,28 @@
+<div ng-include="'tpl/header.html'" onload="nav_func()"></div>
+<div class="container">
+  <div class="row main_content">
+    <div class="col-md-10 col-xs-12">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="breadcrumb">
+            <a href="#/Main">主页</a>/<span>{{detail.name}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 ">
+            <img ng-src="img/detail/{{detail.pic}}.jpg" alt=""/>
+          </div>
+        </div>
+        <h1>{{detail.name}}</h1>
+
+        <p>{{detail.description}}</p>
+        <p class="btn_list">
+          <span class="collect"></span>
+        </p>
+      </div>
+    </div>
+    <div ng-include="'tpl/right_menu.html'" class="col-xs-12 col-md-2" id="right_menu" onload="modal();isLogin()"></div>
+  </div>
+</div>

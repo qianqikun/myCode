@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form action="" id="login">
+            <div class="row login" ng-hide="isLoginSuc">
+                <div class="col-xs-12">
+                    <label for="uname">用户名</label><input type="text" id="uname"/>
+                </div>
+                <div class="col-xs-12">
+                    <label for="upwd">密&nbsp;&nbsp;&nbsp;码</label><input type="text" id="upwd"/>
+                </div>
+                <div class="col-xs-12">
+                    <button type="button" ng-click="login()">登录</button>
+                    <button type="button" class="md-trigger" data-modal="modal-10">注册</button>
+                </div>
+            </div>
+            <div class="row user_info" ng-show="isLoginSuc">
+                <div class="col-xs-12">
+                    <p>欢迎回来~ <a href="" ng-click="login_quit()">退出</a></p>
+
+                    <div class="avatar">
+                        <img src="img/avatar/default_avatar.jpg" alt=""/>
+                    </div>
+                    <p class="user_info_name">{{uname}}</p>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+

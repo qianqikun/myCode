@@ -1,0 +1,82 @@
+<div ng-include="'tpl/header.html'" onload="nav_func()"></div>
+<div class="container">
+  <div class="row" id="carousel">
+    <div class="col col-xs-12">
+      <div id="" class="roundabout_box">
+        <ul>
+          <li ng-repeat="pic in carousel_pic" render-finish>
+            <a href="#/Detail/{{pic.cid}}">
+              <img ng-src="img/Carousel/{{pic.pic}}.jpg">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!--<div class="carousel">-->
+        <!--<ul class="pager"></ul>-->
+        <!--<div class="carousel_pic">-->
+          <!--<img ng-src="img/Carousel/{{pic.pic}}.jpg" ng-repeat="pic in carousel_pic"  render-finish/>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+  <div class="row main_content">
+    <div class="col-xs-12 col-md-10">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="thumbnail floating" ng-repeat="item in list1">
+            <img ng-src="img/detail/{{item.pic}}.jpg" alt="...">
+
+            <div class="caption">
+              <h4>{{item.name}}</h4>
+
+              <p>{{item.description}}</p>
+
+              <p>
+                <a href="#/Detail/{{item.did}}" class="btn btn-primary" role="button" ng-click="stopCarousel()">查看详情</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="thumbnail floating" ng-repeat="item in list2">
+            <img ng-src="img/detail/{{item.pic}}.jpg" alt="...">
+
+            <div class="caption">
+              <h4>{{item.name}}</h4>
+
+              <p>{{item.description}}</p>
+
+              <p>
+                <a href="#/Detail/{{item.did}}" class="btn btn-primary" role="button" ng-click="stopCarousel()">查看详情</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="thumbnail floating" ng-repeat="item in list3">
+            <img ng-src="img/detail/{{item.pic}}.jpg" alt="...">
+
+            <div class="caption">
+              <h4>{{item.name}}</h4>
+
+              <p>{{item.description}}</p>
+
+              <p><a href="#/Detail/{{item.did}}" class="btn btn-primary" role="button"
+                    ng-click="stopCarousel()">查看详情</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-xs-12">
+          <div class="loadMore" ng-click="loadMore()" ng-hide="loadMore_hide">
+            <p>加载更多</p>
+          </div>
+          <p class="alert alert-info" ng-show="loadMore_hide">不好意思没有了~~</p>
+        </div>
+      </div>
+    </div>
+    <div ng-include="'tpl/right_menu.html'" class="col-xs-12 col-md-2" id="right_menu" onload="modal();isLogin()"></div>
+  </div>
+</div>

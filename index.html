@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="cartoon">
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <title></title>
+  <link rel="stylesheet" href="css/cartoon.css"/>
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/angular-animate.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <!--轮播-->
+  <script src="js/carousel/jquery.fancybox.pack.js"></script>
+  <script src="js/carousel/jquery.roundabout.min.js"></script>
+  <!--模态框-->
+  <!--<link rel="stylesheet" type="text/css" href="css/modal/default.css" />-->
+  <link rel="stylesheet" type="text/css" href="css/modal/component.css" />
+  <script src="js/modal/modernizr.custom.js"></script>
+</head>
+<body ng-controller="parentCtrl">
+<ng-view>
+</ng-view>
+<script src="js/cartoon.js"></script>
+<!-- the overlay element -->
+<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+<script src="js/modal/classie.js"></script>
+<!--<script src="js/modal/modalEffects.js"></script>-->
+<!-- for the blur effect -->
+<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+<script>
+  // this is important for IEs
+  var polyfilter_scriptpath = '/js/';
+</script>
+<script src="js/modal/cssParser.js"></script>
+<!--<script src="js/modal/css-filters-polyfill.js"></script>-->
+</body>
+</html>
