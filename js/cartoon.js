@@ -1,4 +1,4 @@
-//动漫跳转
+//动漫跳转 随便改改
 var app = angular.module('cartoon', ['ng', 'ngRoute']);
 app.config(function ($routeProvider) {
   $routeProvider
